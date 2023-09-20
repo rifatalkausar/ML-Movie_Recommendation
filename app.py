@@ -17,7 +17,7 @@ if 'model' not in st.session_state or 'data' not in st.session_state or 'matrix'
 
 
 st.title(':tv: Recommendation System')
-search, image = st.columns([3,1], gap='large')
+search, image = st.columns([3,2], gap='large')
 
 with search:
     movies = st.selectbox(
