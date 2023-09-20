@@ -8,11 +8,11 @@ nltk.download('stopwords')
 nltk.download('punkt') 
 
 if 'model' not in st.session_state or 'data' not in st.session_state or 'matrix' not in st.session_state:
-    model = pickle.load(open('Exercise/vector.pkl', 'rb'))
-    loaded_sparse_matrix = pickle.load(open('Exercise/sparse_matrix.pkl', 'rb'))
+    model = pickle.load(open('model/vector.pkl', 'rb'))
+    loaded_sparse_matrix = pickle.load(open('model/sparse_matrix.pkl', 'rb'))
     st.session_state['model'] = model
     st.session_state['matrix'] = loaded_sparse_matrix
-    df = pd.read_csv('Exercise/movie_recommendation.csv')
+    df = pd.read_csv('dataset/movie_recommendation.csv')
     st.session_state['data'] = df
 
 
